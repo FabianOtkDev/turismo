@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
 
+import 'config/theme/app_theme.dart';
+import 'routes/app_router.dart';
+
 void main() {
-  runApp(const MainApp());
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    final _router = AppRouter();
+
+    final AppTheme appBarTheme = AppTheme();
+
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routeInformationProvider: _router.router.routeInformationProvider,
+      routeInformationParser: _router.router.routeInformationParser,
+      routerDelegate: _router.router.routerDelegate,
+      title: 'MiFlutterApp',
+      theme: appBarTheme.getTheme(),
     );
   }
 }
