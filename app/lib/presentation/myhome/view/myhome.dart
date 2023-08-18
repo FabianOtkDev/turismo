@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:intl/intl.dart'; // para debug: mostrar hora
+import '../../listado/view/view.dart';
 
 class MyHome extends StatelessWidget {
   static const name = 'myhome';
@@ -156,7 +158,7 @@ class Boton extends StatelessWidget {
     return Expanded(
       child: ElevatedButton(
         onPressed: () {
-          // Aquí puedes agregar la lógica para manejar el evento del botón.
+          context.pushNamed(Listado.name);
         },
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.all(16), // Ajusta el padding según tu preferencia
