@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'config/theme/app_theme.dart';
 import 'routes/app_router.dart';
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       routeInformationProvider: _router.router.routeInformationProvider,
       routeInformationParser: _router.router.routeInformationParser,
       routerDelegate: _router.router.routerDelegate,
-      title: 'MiFlutterApp',
+      title: 'APP de Turismo',
       theme: appBarTheme.getTheme(),
     );
   }

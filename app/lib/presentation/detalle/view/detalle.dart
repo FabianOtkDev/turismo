@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart'; // para debug: mostrar hora
 import '../../myhome/view/view.dart';
+import '../../listado/view/view.dart';
 
 class Detalle extends StatelessWidget {
   static const name = 'detalle';
@@ -12,7 +13,7 @@ class Detalle extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text(
-            'APP de Turismo',
+            'APP de Turismo - Detalles',
           ),
         ),
         body: Container(
@@ -21,10 +22,24 @@ class Detalle extends StatelessWidget {
               children: [
                 Text("Página de detalle de lugar"),
 
+                SizedBox(height: 8),
+
+                GestureDetector(
+                  onTap: () => context.pushNamed(Listado.name),
+                  child: Text(
+                    "Volver a la página de Listado",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+
+                SizedBox(height: 8),
+
                 GestureDetector(
                   onTap: () => context.pushNamed(MyHome.name),
                   child: Text(
-                    "Volver",
+                    "Volver al Home",
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
                     ),

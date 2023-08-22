@@ -13,7 +13,7 @@ class Listado extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text(
-            'APP de Turismo',
+            'APP de Turismo - Listado',
           ),
         ),
         body: Container(
@@ -39,7 +39,7 @@ class Listado extends StatelessWidget {
                 GestureDetector(
                   onTap: () => context.pushNamed(MyHome.name),
                   child: Text(
-                    "Volver",
+                    "Volver al Home",
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
                     ),
