@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:app_turismo/presentation/listado/cubit/listado_cubit.dart';
+
 import 'package:intl/intl.dart'; // para debug: mostrar hora
 import '../../myhome/view/view.dart';
 import '../../detalle/view/view.dart';
@@ -7,8 +9,49 @@ import '../../detalle/view/view.dart';
 class Listado extends StatelessWidget {
   static const name = 'listado';
 
+// @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Players'),
+//         actions: [
+//           IconButton(
+//             icon: Icon(Icons.account_circle),
+//             onPressed: () {}),
+//           ),
+//         ],
+//       ),
+//       body: SafeArea(
+//         child: BlocConsumer<ListadoCubit, ListadoState>(
+//           //bloc: BlocProvider.of(context)..getPlayers(),
+//           listener: (context, state) {
+//             // TODO: implement listener
+//           },
+//           builder: (context, state) {
+//             return (state.isLoading)
+//                 ? CustomLoading()
+//                 : ListView.builder(
+//                     itemCount: state.players.length,
+//                     itemBuilder: (context, int index) {
+//                       return ItemCardPlayer(
+//                         player: state.players[index],
+//                       );
+//                     },
+//                   );
+//           },
+//         ),
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         child: Icon(
+//           Icons.add,
+//         ),
+//         onPressed: () {},
+//       ),
+//     );
+//   }
+
   @override
-  Widget build(BuildContext context) {
+  Widget build__old(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -56,6 +99,12 @@ class Listado extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
   }
 }
 
